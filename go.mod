@@ -1,4 +1,4 @@
-module github.com/0xFl4q/1237FHJQSDF1234
+module github.com/0xFl4q/Mint-Stealer
 
 go 1.21.3
 

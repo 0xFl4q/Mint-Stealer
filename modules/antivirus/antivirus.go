@@ -10,7 +10,7 @@ import (
 
 	"strings"
 
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/program"
+	"github.com/0xFl4q/Mint-Stealer/utils/program"
 )
 
 func Run() {

